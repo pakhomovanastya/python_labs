@@ -1,0 +1,5 @@
+fio = input('ФИО:')
+fio1 = fio.split(' ')
+inic = (input('Инициалы:'))
+print('ФИО:', fio,'Инициалы:', inic)
+print('Длина символов:',len(fio)-len(fio1)+len(inic)+1)
