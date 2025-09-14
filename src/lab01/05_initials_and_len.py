@@ -1,5 +1,8 @@
-fio = input('ФИО:')
-fio_ = fio.split()
-inic = ''.join(fio[0].upper() for fio in fio_)
-print('ФИО:', fio,'Инициалы:', inic )
-print('Длина символов:',len(fio)+len(inic))
+fio = input('Введите ФИО: ')
+fio_ = fio.strip()
+fio_2 = fio.split()
+inic = ''.join(x[0].upper() for x in fio_2)
+len_fio = len(fio_)-len(fio_2)-1
+print('Инициалы:',inic)
+print('Длина (символов):', len_fio)
+
