@@ -3,8 +3,8 @@
 Задание 1
 Ввод:имя(строка,которая вводится пользователем), возраст(вводим строку,которая становится целым числом).\
 >
-Вывод:</strong> имя и возраст с клавиатуры (возраст с увеличением на +1).
-### ![Изображение](https://github.com/user-attachments/assets/b0f5b317-bcd1-4518-8e38-f3367c235dec)
+Вывод: имя и возраст с клавиатуры (возраст с увеличением на +1).
+### ![Изображение](https://github.com/user-attachments/assets/6ea5f89d-ec3d-4fb0-9819-c871bb6b5a86)
 
 Задание 2
 Ввод:вещественные числа а и б,допускаются точка или запятая(но мы заменяем запятую на точку,\
@@ -49,7 +49,7 @@ vat_amount = base * (vat/100),total = base + vat_amount.\
 > >Создаём список куда будем добавлять значения с типом list/tuple с помощью ф. isinstance.\
 > >Если значения не являются списком/кортежем ф.riase выводит ошибку TypeError.
 >
-### ![Изображение](<img width="719" height="759" alt="arrays" src="https://github.com/user-attachments/assets/8d84cbba-de49-4a1b-8e4a-abed6cc7c971)
+### ![Изображение](https://github.com/user-attachments/assets/8d84cbba-de49-4a1b-8e4a-abed6cc7c971)
 >
 > > Вывод 1
 > ### ![Изображение](https://github.com/user-attachments/assets/af9d160e-940f-4c6f-ac88-598b2eec4e0f)
