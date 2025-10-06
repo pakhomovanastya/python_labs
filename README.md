@@ -52,13 +52,14 @@ vat_amount = base * (vat/100),total = base + vat_amount.\
 ### ![Изображение](https://github.com/user-attachments/assets/8d84cbba-de49-4a1b-8e4a-abed6cc7c971)
 >
 > > Вывод 1
-> ### ![Изображение](https://github.com/user-attachments/assets/af9d160e-940f-4c6f-ac88-598b2eec4e0f)
+> ### ![Изображение](https://github.com/user-attachments/assets/b0777166-662d-428c-a1b0-cd341bec262f)
 >  
 > > Вывод 2
-> ### ![Изображение](https://github.com/user-attachments/assets/aa985ad2-6d02-4bc7-bce7-0856af2f3bfe)
+> ### ![Изображение](https://github.com/user-attachments/assets/50d31fa3-5eea-4c49-bf3a-1cb2e04c0d9d)
 > 
 > > Вывод 3
-> ### ![Изображение](https://github.com/user-attachments/assets/72b5c619-fae3-4d55-a03d-9033940bead7)
+> ### ![Изображение](https://github.com/user-attachments/assets/4de20e12-43c8-476d-b048-84eec29e0c2b)
+
 >
 
 Задание 2
