@@ -35,8 +35,8 @@ vat_amount = base * (vat/100),total = base + vat_amount.\
 >
 Лабораторная работа №2
 =
-Задание 1\
-> Реализуйте функции:\
+Задание 1
+> Реализуйте функции:
 > > min_max(nums: list[float | int]) -> tuple[float | int, float | int] \
 > > Находим длину цифр, всего в списке должно быть 2 цифры: max, min.\
 > > Ф. raise выводит ошибку, если список пуст.
@@ -59,4 +59,33 @@ vat_amount = base * (vat/100),total = base + vat_amount.\
 > 
 > > Вывод 3
 > ### ![Изображение](https://github.com/user-attachments/assets/72b5c619-fae3-4d55-a03d-9033940bead7)
+>
+
+Задание 2
+> Реализуйте функции:
+> > transpose(mat: list[list[float | int]]) -> list[list]
+> > Поменять строки и столбцы местами, для этого строки должны быть одной длины.
+> > Иначе ф.raise выводит ошибку ValueError
 > 
+> >row_sums(mat: list[list[float | int]]) -> list[float]
+> >Сумма по каждой строке, перебераем числа, проверяем что ненулевой список и\
+> >можем считать числа в этом списке.
+> >Требуется прямоугольность => строки == столбцам.
+> >Если длина = 0, то возвращяем пустой список.
+> 
+> >col_sums(mat: list[list[float | int]]) -> list[float]
+> >Сумма по каждому столбцу => опять перебор чисел в ненулевом списке,\
+> >ипсользуем ф.transpose, чтоб поменять строки и столбцы местами\
+> >и уже только тогда считаем сумму.
+> >Иначе ф.raise выводит ошибку ValueError, что строки разной длины.
+>
+### ![Изображение](https://github.com/user-attachments/assets/a03475f6-c6c5-4ed7-aa63-dd0ccb9eb402)
+>
+> >Вывод 1
+>### ![Изображение](https://github.com/user-attachments/assets/b275e590-c035-4960-ba7e-71a493f9885d)
+> >Вывод 2
+>### ![Изображение](https://github.com/user-attachments/assets/4b2c9c95-54ed-420f-9ad9-bb577362313a)
+>
+> >Вывод 3
+>### ![Изображение](https://github.com/user-attachments/assets/88c1f365-25b6-4fd1-904b-729f23db7b52)
+>
