@@ -30,3 +30,32 @@ vat_amount = base * (vat/100),total = base + vat_amount.\
 >
 Вывод: выше инициалы,а ниже длину строки без лишних пробелов.
 ### ![Изображение](https://github.com/user-attachments/assets/c9801dc2-489f-4e41-b899-c72fd02bbbb6)
+>
+>
+Лабораторная работа №2
+=
+Задание 1\
+> Реализуйте функции:\
+> > min_max(nums: list[float | int]) -> tuple[float | int, float | int] \
+> > Находим длину цифр, всего в списке должно быть 2 цифры: max, min.\
+> > Ф. raise выводит ошибку, если список пуст.
+>
+> > unique_sorted(nums: list[float | int]) -> list[float | int] \
+> > sorted - сортирует список по возрастанию, set сохраняет различные цифры без повторений.
+>
+> >flatten(mat: list[list | tuple]) -> list\
+> >«Расплющить» список списков => нам нужно из списка в спике объединить в единый спиок.
+> >Создаём список куда будем добавлять значения с типом list/tuple с помощью ф. isinstance.\
+> >Если значения не являются списком/кортежем ф.riase выводит ошибку TypeError.
+>
+### ![Изображение](<img width="719" height="759" alt="arrays" src="https://github.com/user-attachments/assets/8d84cbba-de49-4a1b-8e4a-abed6cc7c971)
+>
+> > Вывод 1
+> ### ![Изображение](https://github.com/user-attachments/assets/af9d160e-940f-4c6f-ac88-598b2eec4e0f)
+>  
+> > Вывод 2
+> ### ![Изображение](https://github.com/user-attachments/assets/aa985ad2-6d02-4bc7-bce7-0856af2f3bfe)
+> 
+> > Вывод 3
+> ### ![Изображение](https://github.com/user-attachments/assets/72b5c619-fae3-4d55-a03d-9033940bead7)
+> 
