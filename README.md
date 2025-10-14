@@ -152,5 +152,9 @@ vat_amount = base * (vat/100),total = base + vat_amount.\
 ### ![Изображение](https://github.com/user-attachments/assets/e6ef7b21-4a48-439c-899b-d432db0394d0)
 >
 > > Вывод
-> ### ![Изображение](https://github.com/user-attachments/assets/8d61a2da-39ac-4e64-b492-e1c4afd8b2df")
->  
+> ### ![Изображение](https://github.com/user-attachments/assets/71dfcd98-419b-4c3d-88f0-b6f24b91845a)
+
+>  cd путь к файлу
+> 1) cd путь к файлу
+> 2) $OutputEncoding = [System.Text.Encoding]::UTF8
+> 3) echo "Привет, мир! Привет!!!" | py text_stats.py
