@@ -75,25 +75,10 @@
 ### ![Изображение](https://github.com/user-attachments/assets/b6daf944-3594-49c2-ab1c-e7f8f59a0ad7)
 
 
-> >Вывод
-### ![Изображение](https://github.com/user-attachments/assets/c4ee5145-8087-4117-a91f-2aa4161391ec)
->  Вывод 1
-### ![Изображение](https://github.com/user-attachments/assets/f0c7c645-da8b-4cd8-9b3f-26e0eb658127)
->  
->  Вывод 2
-### ![Изображение](https://github.com/user-attachments/assets/99c99009-060c-4267-b93c-2aa09655a92f)
-> 
->  Вывод 3
-### ![Изображение](https://github.com/user-attachments/assets/65d64c7d-67aa-47c4-ba39-577b49ea6219)
+Вывод А
+### ![Изображение](https://github.com/user-attachments/assets/c722895c-c218-493c-b332-a4faf6e49d80)
 
-Задание 2
-
-### ![Изображение](https://github.com/user-attachments/assets/e6ef7b21-4a48-439c-899b-d432db0394d0)
->
-> > Вывод
-> ### ![Изображение](https://github.com/user-attachments/assets/71dfcd98-419b-4c3d-88f0-b6f24b91845a)
-
-
-
+папка с check.csv
+### ![Изображение](https://github.com/user-attachments/assets/ea2ed4ee-a2de-4c79-bd8e-1109f66337ae)
 
 
