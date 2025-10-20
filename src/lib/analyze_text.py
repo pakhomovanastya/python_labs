@@ -16,9 +16,3 @@ def analyze_text(text: str) -> None:
         if c == 5:
             break
         print(f'{i[0]}: {i[1]}')
-input_text = sys.stdin.buffer.read().decode('utf-8')
-''' читаем весь ввод из командной строки
-и преобразуем байты в нормальный текст'''
-analyze_text(input_text)
-            
-
