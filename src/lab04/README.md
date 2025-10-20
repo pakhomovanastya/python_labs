@@ -1,6 +1,7 @@
 Лабораторная работа №4
 =
-Задание А\
+Задание А
+-
 Пункт 1
 > Реализуйте функции:
 > > read_text(path: str | Path, encoding: str = "utf-8") -> str\
@@ -80,5 +81,42 @@
 
 папка с check.csv
 ### ![Изображение](https://github.com/user-attachments/assets/ea2ed4ee-a2de-4c79-bd8e-1109f66337ae)
+
+Задание B
+-
+Реализуйте функции: text_report.py
+>Главный скрипт который все объединяет.
+> >import sys\
+> >sys.path.append(r'C:\Users\First\Documents\GitHub\python_labs\src\lib')\
+> >from text_3 import *\
+
+>Импорт функций текстовой обработки
+> >from io_txt_csv import read_text, write_csv
+> >from analyze_text import analyze_text
+
+> Импорт наших модулей: Функции для ввода-вывода и анализа текста.
+> >input_text = read_text(r'C:\Users\First\Documents\GitHub\python_labs\src\data\input_2.txt')
+
+> Чтение входного файла: Читаем текст из указанного файла.
+> >analyze_text(input_text)
+
+> Анализ текста: Выводим статистику в консоль.
+> >write_csv(top_n(tokenize(normalize(input_text)), 20), path=r'C:\Users\First\Documents\GitHub\python_labs\src\data\check_2.csv', header= ['WORD', 'COUNT'])
+### ![Изображение](https://github.com/user-attachments/assets/ac505e25-5420-41a4-906e-195c4f535b87)
+
+Вывод text_report_csv:
+### ![Изображение](https://github.com/user-attachments/assets/7249425f-f2c9-4118-ba05-7266accd672b)
+
+Файл input_2.txt
+### ![Изображение](https://github.com/user-attachments/assets/a04ce99a-63c1-49a5-9866-9fe47873794c)
+
+Файл check_2.csv
+### ![Изображение](https://github.com/user-attachments/assets/8d416e8c-2795-42e4-83e3-4028bda0909b)
+
+
+
+
+
+
 
 
