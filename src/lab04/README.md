@@ -1,6 +1,7 @@
 Лабораторная работа №4
 =
-Задание 1
+Задание А\
+Пункт 1
 > Реализуйте функции:
 > > read_text(path: str | Path, encoding: str = "utf-8") -> str\
 > > Открыть файл на чтение в указанной кодировке и вернуть содержимое как одну строку.\
@@ -23,17 +24,39 @@
 
 > Обработка ошибки кодировки:
 > > Если файл в другой кодировке (не UTF-8) - печатаем сообщение и возвращаем None\
-### ![Изображение](https://github.com/user-attachments/assets/90b1cf75-1274-429d-b6d6-354813e53d89)
->
-> > tokenize(text: str) -> list[str] \
+### ![Изображение](https://github.com/user-attachments/assets/a8a87d51-778e-440a-8f5e-ead3a93161dc)
+
+Пункт 2
+> Функция
+> > write_csv(rows: list[tuple | list], path: str | Path, header: tuple[str, ...] | None = None) -> None\
+> > Создать/перезаписать CSV с разделителем ,.
+> > Если передан header, записать его первой строкой.
+> > Проверить, что каждая строка в rows имеет одинаковую длину (иначе ValueError).
+
+> Функция write_csv()
+> >rows - итерируемый объект (можно перебирать) содержащий последовательности (строки, списки, кортежи)
+> >path - куда сохранить CSV файл
+> >header - заголовок таблицы, может быть None (без заголовка)
+
+> p = Path(path)
+> rows = list(rows)
+> >Преобразуем rows в список (чтобы можно было несколько раз работать с данными)
+
+> with p.open("w", newline="", encoding="utf-8") as f:
+> >with - контекстный менеджер (автоматически закроет файл)
+> >"w" - открываем для записи (перезапишет если файл существует)
+> >newline="" - специальная настройка для корректной работы с CSV
+> >encoding="utf-8" - записываем в кодировке UTF-8
+
+> w = csv.writer(f)
+> >Создание CSV писателя: Объект который умеет записывать данные в CSV формате.
+
+> for r in rows:
+> >Для каждой строки в rows проверяем что ее длина совпадает с длиной заголовка
+> >Если совпадает - записываем строку
+> >Если нет - вызываем ошибку ValueError
 ### ![Изображение](https://github.com/user-attachments/assets/2e1ec975-d6b7-4baa-bfb2-dc4d5bdd6123)
->
-> >count_freq(tokens: list[str]) -> dict[str, int]\
-### ![Изображение](https://github.com/user-attachments/assets/857d2f75-57e0-4917-9226-b1c6aa34f7d8)
->
-> >top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]
-### ![Изображение](https://github.com/user-attachments/assets/85df6714-143c-44b5-b47a-31fb6a19e46f)
->
+
 > >Вывод
 ### ![Изображение](https://github.com/user-attachments/assets/c4ee5145-8087-4117-a91f-2aa4161391ec)
 >  Вывод 1
@@ -51,6 +74,7 @@
 >
 > > Вывод
 > ### ![Изображение](https://github.com/user-attachments/assets/71dfcd98-419b-4c3d-88f0-b6f24b91845a)
+
 
 
 
