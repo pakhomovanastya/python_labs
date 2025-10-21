@@ -51,9 +51,10 @@ def ensure_parent_dir(path: str | Path) -> None: # принимает путь, 
 
 
 def main():
-    # txt = read_text("../data/input.txt") # относительный путь
-    # print(txt)
-    # print('пустой файл:', read_text(r"C:\Users\First\Documents\GitHub\python_labs\src\data\empty.txt"))
+    txt = read_text("../data/input.txt") # относительный путь
+    print(txt)
+    print('пустой файл:', read_text(r"C:\Users\First\Documents\GitHub\python_labs\src\data\empty.txt"))
+    
     print(read_text(r"C:\Users\First\Documents\GitHub\python_labs\src\data\input.txt"))
     write_csv([("word","count"),("test",3)], r"C:\Users\First\Documents\GitHub\python_labs\src\data\check.csv") 
     write_csv(rows=[], path=r"C:\Users\First\Documents\GitHub\python_labs\src\data\check_empty.csv", header=None) 
