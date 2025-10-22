@@ -10,7 +10,8 @@ def read_text(path: str | Path, encoding: str = "utf-8") -> str:
     p = Path(path)
     try:
         return p.read_text(encoding=encoding)
-    #читаем весь файл как одну строку в указанной кодировке
+    # ищем где может возникнуть ошибка
+    # p.read_text(e=e) - читаем весь файл как одну строку в указанной кодировке
     except FileNotFoundError:
         print(f'Ошибка: Файл {p} не найден.')
         return None
