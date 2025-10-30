@@ -15,4 +15,3 @@ def analyze_text(text: str) -> None:
         c += 1
         if c == 5:
             break
-        print(f'{i[0]}: {i[1]}')

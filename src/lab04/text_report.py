@@ -12,3 +12,4 @@ analyze_text(input_text)
 write_csv(top_n(tokenize(normalize(input_text)), 20), path=r'C:\Users\First\Documents\GitHub\python_labs\src\data\check_2.csv', header= ['WORD', 'COUNT'])
 # нормализуем текст, разбиваем на слова, получаем топ-... слов
 # write_csv(...) - записываем в CSV файл с заголовком ['WORD', 'COUNT'] и сохраняет файл
+

@@ -10,8 +10,7 @@ def read_text(path: str | Path, encoding: str = "utf-8") -> str:
     p = Path(path)
     try:
         return p.read_text(encoding=encoding)
-    # ищем где может возникнуть ошибка
-    # p.read_text(e=e) - читаем весь файл как одну строку в указанной кодировке
+    #читаем весь файл как одну строку в указанной кодировке
     except FileNotFoundError:
         print(f'Ошибка: Файл {p} не найден.')
         return None
@@ -52,10 +51,9 @@ def ensure_parent_dir(path: str | Path) -> None: # принимает путь, 
 
 
 def main():
-    txt = read_text("../data/input.txt") # относительный путь
-    print(txt)
-    print('пустой файл:', read_text(r"C:\Users\First\Documents\GitHub\python_labs\src\data\empty.txt"))
-    
+    # txt = read_text("../data/input.txt") # относительный путь
+    # print(txt)
+    # print('пустой файл:', read_text(r"C:\Users\First\Documents\GitHub\python_labs\src\data\empty.txt"))
     print(read_text(r"C:\Users\First\Documents\GitHub\python_labs\src\data\input.txt"))
     write_csv([("word","count"),("test",3)], r"C:\Users\First\Documents\GitHub\python_labs\src\data\check.csv") 
     write_csv(rows=[], path=r"C:\Users\First\Documents\GitHub\python_labs\src\data\check_empty.csv", header=None) 
