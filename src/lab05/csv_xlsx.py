@@ -45,4 +45,4 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
         ws.column_dimensions[col[0].column_letter].width = max(max_len + 2, 8) #изменяем ширину текущей(каждой) колонки
     wb.save(xlsx_path)
     
-csv_to_xlsx("data/lab_05/people.csv", "data/lab_05/people_from_csv2.xlsx")
+csv_to_xlsx("samples/people.csv", "samples/people_from_csv2.xlsx")

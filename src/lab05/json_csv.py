@@ -44,5 +44,8 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     with open(json_path,'w', encoding="utf-8" ) as f:
         json.dump(rows, f, ensure_ascii=False, indent=2)
 
-json_to_csv("data/lab_05/people.json", "data/lab_05/people_from_json.csv") #относительной путь онтосительно этого файла
-csv_to_json("data/lab_05/people.csv", "data/lab_05/people_from_csv.json")
+# json_to_csv("data/lab_05/people.json", "data/lab_05/people_from_json.csv") #относительной путь онтосительно этого файла
+# csv_to_json("data/lab_05/people.csv", "data/lab_05/people_from_csv.json")
+
+json_to_csv("samples/people.json", "samples/people_from_json.csv") #относительной путь онтосительно этого файла
+csv_to_json("samples/people.csv", "samples/people_from_csv.json")
