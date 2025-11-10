@@ -172,7 +172,15 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 csv_to_xlsx("data/samples/people.csv", "data/out/people_from_csv2.xlsx")
 ```
 
+Сценарий запуска
+-
+>Мы находимся в папке lab05
+>Нам нужно подняться на деррикторию выще cd .. к src
+>Далее поднимаемся к папке python_labs cd .. , чтобы сохранить файлы в папку data
+>Прописывем путь python .\src\lab05\json_csv.py и python .\src\lab05\csv_xlsx.py из папки lad05
+>где сохраняться в папке data
 
+<img width="1263" height="323" alt="запуск заданий А и В" src="https://github.com/user-attachments/assets/0c0acd2a-8a6e-47ce-b796-67e238aca96e" />
 
 
 
