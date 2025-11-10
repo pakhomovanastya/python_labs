@@ -82,8 +82,8 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     with open(json_path,'w', encoding="utf-8" ) as f:
         json.dump(rows, f, ensure_ascii=False, indent=2)
 
-json_to_csv("samples/people.json", "samples/people_from_json.csv") #относительной путь онтосительно этого файла
-csv_to_json("samples/people.csv", "samples/people_from_csv.json")
+json_to_csv("data/samples/people.json", "data/out/people_from_json.csv") #относительной путь онтосительно этого файла
+csv_to_json("data/samples/people.csv", "data/out/people_from_csv.json")
 
  ```
 
@@ -169,8 +169,9 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
         ws.column_dimensions[col[0].column_letter].width = max(max_len + 2, 8) #изменяем ширину текущей(каждой) колонки
     wb.save(xlsx_path)
     
-csv_to_xlsx("samples/people.csv", "samples/people_from_csv2.xlsx")
+csv_to_xlsx("data/samples/people.csv", "data/out/people_from_csv2.xlsx")
 ```
+
 
 
 
