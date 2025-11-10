@@ -1,42 +1,4 @@
-# import csv
-# from pathlib import Path
-# from openpyxl import Workbook
-
-# def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
-#     """
-#     Конвертирует CSV в XLSX.
-#     Использовать openpyxl ИЛИ xlsxwriter.
-#     Первая строка CSV — заголовок.
-#     Лист называется "Sheet1".
-#     Колонки — автоширина по длине текста (не менее 8 символов).
-#     """
-#     xlsx_path = Path(xlsx_path) #преобразуем в объекты типа Path, чтобы мы работали с путями
-#     csv_path = Path(csv_path) 
-#     if xlsx_path.suffix.casefold() != ".xlsx": #расширение файла у нашего относительного пути
-#         raise ValueError('Неверный тип файла для аргумента xlsx_path')
-#     if csv_path.suffix.casefold() != ".csv":
-#         raise ValueError('Неверный тип файла для аргумента csv_path')
-    
-#     with open (csv_path, "r", encoding='utf-8') as fr: #r для чтения файла
-#         reader = csv.DictReader(fr)
-#         data = list(reader)
-
-#         wb = Workbook()
-#         ws = wb.active
-#         ws.title = "Sheet1"
-
-#         headers = list(data[0].keys())
-#         for col, header in enumerate(headers, 1): #бежим построчно
-#             ws.cell(row=1, column=col, value=header)
-
-#         for row, item in enumerate(data, 2): #бежим по списку словарей 
-#             for col, header in enumerate(headers, 1): #бежим по колонкам
-#                 ws.cell(row=row, column=col, value=item[header])
-
-#         wb.save(xlsx_path)
-
-# csv_to_xlsx("data/lab_05/people.csv", "data/lab_05/people_from_csv.xlsx")
-
+from pathlib import Path
 import csv
 from openpyxl import Workbook
 
@@ -48,19 +10,29 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     Лист называется "Sheet1".
     Колонки — автоширина по длине текста (не менее 8 символов).
     """
-    try:
-        with open(csv_path, "r", encoding="utf-8") as f:
-            people = csv.reader(f)
+    xlsx_path = Path(xlsx_path) #преобразуем в объекты типа Path, чтобы мы работали с путями
+    csv_path = Path(csv_path)
+    if xlsx_path.suffix.casefold() != ".xlsx": 
+        raise ValueError('Неверный тип файла для аргумента xlsx_path') 
+    if csv_path.suffix.casefold() != ".csv": 
+        raise ValueError('Неверный тип файла для аргумента csv_path')
+
+    try: 
+        with open(csv_path, "r", encoding="utf-8") as f: 
+            people = csv.reader(f) 
             people = list(people)
     except FileNotFoundError:
         raise FileNotFoundError("Осутствующий файл")
+    
     if not people:
         raise ValueError('Пустой CSV')
+    
     headers = people[0]
     if headers[1].isdigit(): 
         #проверяем, что в первой строке 2го столбеца это число,
         #тогда выводится ошибка(т.к. это не заголовок)
         raise ValueError('Пустой заголовок в CSV')
+    
     wb = Workbook()
     ws = wb.active
     ws.title = "Sheet1"
