@@ -4,7 +4,7 @@
 -
 Функция json_to_csv:
 ---
->Открываем и читаем JSON-файл
+Открываем и читаем JSON-файл
 >with open(...) — безопасно открываем файл (автоматически закроется)
 >json.load(f) — превращаем текст из файла в структуры данных Python
 >Если файл поврежден — выдаем ошибку "Пустой JSON..."
@@ -50,11 +50,11 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
 >csv.DictReader(f) — читает CSV и сразу превращает каждую строку в словарь
 >Ключи словаря — названия колонок, значения — данные ячеек
 >list(people) — превращаем все строки в список словарей
-\
+
 Проверяем данные
 >if not rows — если список пустой, значит CSV без данных
 >if not people.fieldnames — если нет названий колонок
-\
+
 Записываем JSON
 >json.dump(rows, f, ...) — превращаем список словарей в JSON-текст
 >ensure_ascii=False — разрешаем русские буквы
@@ -86,7 +86,7 @@ json_to_csv("samples/people.json", "samples/people_from_json.csv") #относи
 csv_to_json("samples/people.csv", "samples/people_from_csv.json")
 
  ```
-=
+
 Задание B — CSV → XLSX
 -
 Функция csv_to_xlsx
@@ -96,29 +96,29 @@ csv_to_json("samples/people.csv", "samples/people_from_csv.json")
 >Path(xlsx_path).suffix — получаем расширение файла (.xlsx, .csv)
 >casefold() — игнорируем регистр (.XLSX тоже подойдет)
 >Проверяем, что файлы правильного типа
-\
+
 Читаем CSV-файл
 >csv.reader(f) — читаем CSV построчно
 >list(people) — превращаем все строки в список
-\
+
 Проверяем данные
 >Если список пустой — ошибка
 >Проверяем, что вторая колонка заголовка — не число (простая проверка на заголовок)
-\
+
 Создаем Excel-книгу
 >Workbook() — создаем новую Excel-книгу
 >wb.active — получаем активный лист
 >ws.title = "Sheet1" — даем листу имя
-\
+
 Записываем данные
 >for p in people: — проходим по всем строкам CSV
 >ws.append(p) — добавляем строку в Excel
-\
+
 Настраиваем ширину колонок
 >for col in ws.columns: — проходим по всем колонкам Excel
 >max(len(str(cell.value or "")) for cell in col) — находим самую длинную строку в колонке
 >max(max_len + 2, 8) — устанавливаем ширину: либо (макс.длина + 2), либо минимум 8 символов
-\
+
 Сохраняем файл
 >wb.save(xlsx_path) — сохраняем Excel-файл
 ```
@@ -171,6 +171,7 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     
 csv_to_xlsx("samples/people.csv", "samples/people_from_csv2.xlsx")
 ```
+
 
 
 
