@@ -181,6 +181,8 @@ csv_to_xlsx("data/samples/people.csv", "data/out/people_from_csv2.xlsx")
 >где сохраняться в папке data
 
 <img width="1263" height="323" alt="запуск заданий А и В" src="https://github.com/user-attachments/assets/0c0acd2a-8a6e-47ce-b796-67e238aca96e" />
+<img width="527" height="513" alt="image" src="https://github.com/user-attachments/assets/54dd7095-d507-45d1-bbaa-76d24c607b5a" />
+
 
 
 
