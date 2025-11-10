@@ -41,7 +41,9 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
         ws.append(p) #сразу записываем построчно 
 
     for col in ws.columns: #цикл бежим по колонкам
-        max_len = max(len(str(cell.value or "")) for cell in col) #макс длинна строки в колонке,преврати в строку, где пробежимся по всем значениям колонки, посмотри на длину в текущей колонке и возьми макс длину
+        max_len = max(len(str(cell.value or "")) for cell in col) 
+        #макс длинна строки в колонке,преврати в строку, где пробежимся по всем значениям колонки, 
+        ##посмотри на длину в текущей колонке и возьми макс длину
         ws.column_dimensions[col[0].column_letter].width = max(max_len + 2, 8) #изменяем ширину текущей(каждой) колонки
     wb.save(xlsx_path)
     
