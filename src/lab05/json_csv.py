@@ -1,3 +1,4 @@
+from pathlib import Path
 import json
 import csv
 def json_to_csv(json_path: str, csv_path: str) -> None:
@@ -6,6 +7,11 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
     Поддерживает список словарей [{...}, {...}], заполняет отсутствующие поля пустыми строками.
     Кодировка UTF-8. Порядок колонок — как в первом объекте или алфавитный (указать в README).
     """
+    json_path = Path(json_path)
+    if json_path.suffix.casefold() != ".json": 
+        raise ValueError('Неверный тип файла для аргумента json_path') 
+    
+
     try:
         with open(json_path , encoding="utf-8") as f:
             people = json.load(f) #загрузить из файла
@@ -28,6 +34,10 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     Заголовок обязателен, значения сохраняются как строки.
     json.dump(..., ensure_ascii=False, indent=2)
     """
+    csv_path = Path(csv_path)
+    if csv_path.suffix.casefold() != ".csv": 
+        raise ValueError('Неверный тип файла для аргумента csv_path')
+
     try:
         with open(csv_path , encoding="utf-8") as f:
             people = csv.DictReader(f) #читает CSV как список словарей
