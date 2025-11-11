@@ -19,7 +19,7 @@
 >people[0].keys() — берем названия колонок из первого словаря
 >writeheader() — записываем строку с названиями колонок
 >writerows(people) — записываем все данные сразу
- ```
+ ```python
  import json
 import csv
 def json_to_csv(json_path: str, csv_path: str) -> None:
@@ -59,7 +59,7 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
 >json.dump(rows, f, ...) — превращаем список словарей в JSON-текст
 >ensure_ascii=False — разрешаем русские буквы
 >indent=2 — красивое форматирование с отступами
- ```
+ ```python
 def csv_to_json(csv_path: str, json_path: str) -> None:
     """
     Преобразует CSV в JSON (список словарей).
@@ -121,7 +121,7 @@ csv_to_json("data/samples/people.csv", "data/out/people_from_csv.json")
 
 Сохраняем файл
 >wb.save(xlsx_path) — сохраняем Excel-файл
-```
+```python
 from pathlib import Path
 import csv
 from openpyxl import Workbook
@@ -182,6 +182,7 @@ csv_to_xlsx("data/samples/people.csv", "data/out/people_from_csv2.xlsx")
 
 <img width="1263" height="323" alt="запуск заданий А и В" src="https://github.com/user-attachments/assets/0c0acd2a-8a6e-47ce-b796-67e238aca96e" />
 <img width="527" height="513" alt="image" src="https://github.com/user-attachments/assets/54dd7095-d507-45d1-bbaa-76d24c607b5a" />
+
 
 
 
