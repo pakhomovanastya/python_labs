@@ -8,12 +8,12 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
     """
     try:
         with open(json_path , encoding="utf-8") as f:
-            people = json.load(f)
+            people = json.load(f) #загрузить из файла
     except json.decoder.JSONDecodeError:
         raise ValueError("Пустой JSON или неподдерживаемая структура")
     
     for p in people:
-        if type(p)!=dict:
+        if type(p)!=dict: #записать в файл
             raise ValueError("Список с не-словарами")
         
     with open(csv_path,'w', newline="",encoding="utf-8" ) as f:
@@ -30,7 +30,7 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     """
     try:
         with open(csv_path , encoding="utf-8") as f:
-            people = csv.DictReader(f)
+            people = csv.DictReader(f) #читает CSV как список словарей
             rows = list(people)
     except :
         raise FileNotFoundError("Осутствующий файл")
