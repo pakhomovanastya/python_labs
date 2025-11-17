@@ -11,7 +11,6 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
     if json_path.suffix.casefold() != ".json": 
         raise ValueError('Неверный тип файла для аргумента json_path') 
     
-
     try:
         with open(json_path , encoding="utf-8") as f:
             people = json.load(f) #загрузить из файла
@@ -54,5 +53,9 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     with open(json_path,'w', encoding="utf-8" ) as f:
         json.dump(rows, f, ensure_ascii=False, indent=2)
 
-json_to_csv("data/samples/people.json", "data/out/people_from_json.csv") #относительной путь онтосительно этого файла
-csv_to_json("data/samples/people.csv", "data/out/people_from_csv.json")
+def main():
+    json_to_csv("data/samples/people.json", "data/out/people_from_json.csv") #относительной путь онтосительно этого файла
+    csv_to_json("data/samples/people.csv", "data/out/people_from_csv.json")
+
+if __name__ == "__main__":
+    main()
