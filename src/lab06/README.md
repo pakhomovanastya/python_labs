@@ -59,16 +59,22 @@ cat_parser.add_argument("-n", action="store_true", help="Нумеровать с
 ```
 >-n - короткое имя флага
 >action="store_true" - если флаг указан, значение становится True, иначе False
+<img width="950" height="587" alt="def_cat_cli_text" src="https://github.com/user-attachments/assets/d078c876-9692-4915-93dc-8d7cbf0bc07e" />
+<img width="1102" height="1022" alt="def_main_cli_text" src="https://github.com/user-attachments/assets/1b02a11c-fa68-4ff2-a29c-e21df8995cfb" />
 
 Команда cat:
 >Без нумерации
+<img width="1113" height="187" alt="Команда cat без нумерации" src="https://github.com/user-attachments/assets/20a6deff-888d-431d-87c5-88845f75834f" />
 
 >С нумерацией строк
+<img width="1192" height="178" alt="Команда cat c нумерацией строк" src="https://github.com/user-attachments/assets/2a28b113-2b18-43b9-83c0-3deb0535967d" />
 
 Команда stats:
 >Топ 5 слов (по умолчанию)
+<img width="1142" height="228" alt="Команда stats Топ 5 слов (по умолчанию)" src="https://github.com/user-attachments/assets/65faf573-8723-45b4-99d6-2e52f5de93db" />
 
 >Топ 10 слов
+<img width="1272" height="336" alt="Команда stats Топ 10 слов" src="https://github.com/user-attachments/assets/9b080478-fcd9-42b3-9d1c-30c52668246a" />
 
 код cli_convert.py
 ---
@@ -110,6 +116,8 @@ except SystemExit:
     print("\nИсправьте аргументы и попробуйте снова")
     sys.exit(1)
 ```
+<img width="873" height="1033" alt="cli_convert" src="https://github.com/user-attachments/assets/89640684-39c4-4a91-b4a1-b39834053af9" />
+
 
 Конвертация JSON в CSV:
 ```
@@ -125,3 +133,4 @@ python .\cli_convert.py csv2json --in "..\..\data\samples\people.csv" --out "..\
 ```
 python .\cli_convert.py csv2xlsx --in "..\..\data\samples\people.csv" --out "..\..\data\out\people_06.xlsx"
 ```
+<img width="392" height="136" alt="результат" src="https://github.com/user-attachments/assets/f768cce8-6286-4a72-ab55-9c580f3d49ea" />
