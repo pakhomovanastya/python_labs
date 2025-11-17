@@ -18,8 +18,6 @@ def cat(fpath: str , numeration: bool) -> None:
             for line in fr.readlines():
                 print(line.strip())
     
-
-
 def main():
     """Создаем основной парсер аргументов с описанием"""
 
