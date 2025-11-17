@@ -20,7 +20,8 @@
 >writeheader() — записываем строку с названиями колонок
 >writerows(people) — записываем все данные сразу
  ```python
- import json
+from pathlib import Path
+import json
 import csv
 def json_to_csv(json_path: str, csv_path: str) -> None:
     """
@@ -28,14 +29,18 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
     Поддерживает список словарей [{...}, {...}], заполняет отсутствующие поля пустыми строками.
     Кодировка UTF-8. Порядок колонок — как в первом объекте или алфавитный (указать в README).
     """
+    json_path = Path(json_path)
+    if json_path.suffix.casefold() != ".json": 
+        raise ValueError('Неверный тип файла для аргумента json_path') 
+    
     try:
         with open(json_path , encoding="utf-8") as f:
-            people = json.load(f)
+            people = json.load(f) #загрузить из файла
     except json.decoder.JSONDecodeError:
         raise ValueError("Пустой JSON или неподдерживаемая структура")
     
     for p in people:
-        if type(p)!=dict:
+        if type(p)!=dict: #записать в файл
             raise ValueError("Список с не-словарами")
         
     with open(csv_path,'w', newline="",encoding="utf-8" ) as f:
@@ -66,9 +71,13 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     Заголовок обязателен, значения сохраняются как строки.
     json.dump(..., ensure_ascii=False, indent=2)
     """
+    csv_path = Path(csv_path)
+    if csv_path.suffix.casefold() != ".csv": 
+        raise ValueError('Неверный тип файла для аргумента csv_path')
+
     try:
         with open(csv_path , encoding="utf-8") as f:
-            people = csv.DictReader(f)
+            people = csv.DictReader(f) #читает CSV как список словарей
             rows = list(people)
     except :
         raise FileNotFoundError("Осутствующий файл")
@@ -82,9 +91,12 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     with open(json_path,'w', encoding="utf-8" ) as f:
         json.dump(rows, f, ensure_ascii=False, indent=2)
 
-json_to_csv("data/samples/people.json", "data/out/people_from_json.csv") #относительной путь онтосительно этого файла
-csv_to_json("data/samples/people.csv", "data/out/people_from_csv.json")
+def main():
+    json_to_csv("data/samples/people.json", "data/out/people_from_json.csv") #относительной путь онтосительно этого файла
+    csv_to_json("data/samples/people.csv", "data/out/people_from_csv.json")
 
+if __name__ == "__main__":
+    main()
  ```
 
 Задание B — CSV → XLSX
@@ -165,11 +177,17 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
         ws.append(p) #сразу записываем построчно 
 
     for col in ws.columns: #цикл бежим по колонкам
-        max_len = max(len(str(cell.value or "")) for cell in col) #макс длинна строки в колонке,преврати в строку, где пробежимся по всем значениям колонки, посмотри на длину в текущей колонке и возьми макс длину
+        max_len = max(len(str(cell.value or "")) for cell in col) 
+        #макс длинна строки в колонке,преврати в строку, где пробежимся по всем значениям колонки, 
+        ##посмотри на длину в текущей колонке и возьми макс длину
         ws.column_dimensions[col[0].column_letter].width = max(max_len + 2, 8) #изменяем ширину текущей(каждой) колонки
     wb.save(xlsx_path)
+
+def main():
+    csv_to_xlsx("data/samples/people.csv", "data/out/people_from_csv2.xlsx")
     
-csv_to_xlsx("data/samples/people.csv", "data/out/people_from_csv2.xlsx")
+if __name__ == '__main__':
+    main()
 ```
 
 Сценарий запуска
