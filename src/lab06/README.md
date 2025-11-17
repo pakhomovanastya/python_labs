@@ -55,9 +55,8 @@ cat_parser.add_argument("-n", action="store_true", help="Нумеровать с
 >-n - короткое имя флага
 >action="store_true" - если флаг указан, значение становится True, иначе False
 
-GitHub/python_labs/images/lab06/def_cat_cli_text.png
-
-GitHub/python_labs/images/lab06/def_main_cli_text.png
+![alt text](def_cat_cli_text.png)
+![alt text](def_main_cli_text.png)
 
 
 
