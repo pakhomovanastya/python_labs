@@ -331,9 +331,10 @@ pytest tests/test_text.py::test_normalize
 ```
 
 Файл test_text.py
+---
 <img width="735" height="887" alt="test_text_часть1" src="https://github.com/user-attachments/assets/db23d1cb-e8e0-4a6e-922b-7ad02677c416" />
 <img width="883" height="647" alt="test_text_часть2" src="https://github.com/user-attachments/assets/f01650de-912d-4fd1-9fee-38ae639d792b" />
----
+
 Файл test_json_csv.py
 ---
 <img width="948" height="852" alt="test_json_csv_часть1" src="https://github.com/user-attachments/assets/f3ee1884-a519-4df8-b306-c06dc9827fcc" />
