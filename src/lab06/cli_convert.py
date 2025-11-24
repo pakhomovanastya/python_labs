@@ -1,8 +1,10 @@
 import argparse
 import sys
-sys.path.append(r'C:\Users\First\Documents\GitHub\python_labs\src')
+
+# sys.path.append(r'C:\Users\First\Documents\GitHub\python_labs\src')
 from lab05.json_csv import json_to_csv, csv_to_json
 from lab05.csv_xlsx import csv_to_xlsx
+
 
 def main():
     """функция, которая настраивает парсер аргументов,
@@ -42,9 +44,11 @@ def main():
             csv_to_xlsx(args.input, args.output)
     except FileNotFoundError:
         print(f"FileNotFoundError: Отсутствие входного файла {args.input}")
+        sys.exit(2)
     except SystemExit:
         print("\nИсправьте аргументы и попробуйте снова")
         sys.exit(1)
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     main()

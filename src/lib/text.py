@@ -1,18 +1,22 @@
 import re
+
+
 def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
     if casefold:
         text = text.casefold()
     if yo2e:
-        text = text.replace('Ё', 'Е')
-        text = text.replace('ё', 'е')
+        text = text.replace("Ё", "Е")
+        text = text.replace("ё", "е")
     text = text.strip()
-    text = re.sub(r'\\[trnwfdv]', ' ', text)
-    text = ' '.join(text.split())
+    text = re.sub(r"\\[trnwfdv]", " ", text)
+    text = " ".join(text.split())
     return text
 
+
 def tokenize(text: str) -> list[str]:
-    a = re.findall(r'\w+(?:-\w+)*',text)
+    a = re.findall(r"\w+(?:-\w+)*", text)
     return a
+
 
 # def tokenize(text: str) -> list[str]:
 #     text_1 = text.replace(',', ' ').replace('.', ' ').replace(':', ' ').replace(';', ' ').replace('!', ' ').replace('?', ' ')
@@ -25,13 +29,15 @@ def tokenize(text: str) -> list[str]:
 #             b.append(i)
 #     return b
 
+
 def count_freq(tokens: list[str]) -> dict[str, int]:
     unic_tokens = list(set(tokens))
     count_tokens = []
     for i in unic_tokens:
         count_tokens.append(tokens.count(i))
-    dict_tokens = dict(zip(unic_tokens,count_tokens))
+    dict_tokens = dict(zip(unic_tokens, count_tokens))
     return dict_tokens
+
 
 # def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
 #     freq = count_freq(freq)
@@ -42,8 +48,10 @@ def count_freq(tokens: list[str]) -> dict[str, int]:
 #     ans = sorted(top, key=lambda x: -x[1])[:n]
 #     return ans
 
+
 def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
     freq = count_freq(freq)
-    top = sorted(list(freq.items()), key=lambda x: (-x[1], x[0])) [:n] # items выводит список кортежей в формате (ключ, значение) 
+    top = sorted(list(freq.items()), key=lambda x: (-x[1], x[0]))[
+        :n
+    ]  # items выводит список кортежей в формате (ключ, значение)
     return top
-
