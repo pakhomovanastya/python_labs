@@ -344,3 +344,7 @@ pytest tests/test_text.py::test_normalize
 Вывод
 ---
 <img width="1478" height="1025" alt="вывод" src="https://github.com/user-attachments/assets/25240eb6-5866-4e72-a8a8-66a7749cc289" />
+
+pytest --cov=src --cov-report=term-missing с покрытием
+<img width="1298" height="370" alt="покрытие" src="https://github.com/user-attachments/assets/8219bfdc-be0e-48c7-b608-0a3f764864ec" />
+
