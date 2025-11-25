@@ -18,3 +18,19 @@ dependencies = [
   "requests>=2.32",
   "pandas>=2.2"
 ]
+
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "*/csv_xlsx.py",
+    "*/cli_convert.py",
+    "*/cli_text.py",
+    "*/analyze_text.py",
+    "*/text_stats.py",
+    "*/lab03/text.py",
+    "*/io_text_csv.py",
+    "*/text_report.py",
+    "*/tuples.py",
+    "*/stats.py",
+    "*/__init__.py"
+]
