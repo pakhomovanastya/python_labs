@@ -253,12 +253,17 @@ if __name__ == '__main__':
 ```
 lab08/models.py
 -
+<img width="1383" height="911" alt="models-1" src="https://github.com/user-attachments/assets/cbfcd2cb-2258-4d86-829e-3f03081cc84c" />
+<img width="1117" height="901" alt="models-2" src="https://github.com/user-attachments/assets/f5c2883c-9966-4ea2-bed9-5f9626582fc3" />
 
 lab08/serialize.py
 -
+<img width="1012" height="330" alt="serialize" src="https://github.com/user-attachments/assets/9ae47bf0-a1ea-40b6-bf73-f54469554056" />
 
 lab08/main.py
 -
+<img width="837" height="362" alt="main" src="https://github.com/user-attachments/assets/146d2df9-5a5b-4052-a388-6dcf16bef9f5" />
 
 Пример вывода программы
 -
+<img width="720" height="197" alt="вывод" src="https://github.com/user-attachments/assets/d43e8dd8-10a0-438f-81b2-3cec4f73329f" />
