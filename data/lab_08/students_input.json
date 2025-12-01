@@ -1,20 +1,14 @@
 [
   {
-    "fio": "John Snowy",
-    "birthdate": "2000/12/01",
+    "fio": "Иванов Иван",
+    "birthdate": "2000-12-01",
     "group": "SE-01",
     "gpa": 4.3
   },
   {
-    "fio": "Michael Jordany",
-    "birthdate": "1975/11/11",
-    "group": "PP-01",
-    "gpa": 5.0
-  },
-  {
-    "fio": "John Smity",
-    "birthdate": "1992/02/14",
-    "group": "JJ-92",
-    "gpa": 3.1
+    "fio": "Петров Петр",
+    "birthdate": "2001-05-15",
+    "group": "CS-02",
+    "gpa": 3.8
   }
 ]

@@ -4,12 +4,14 @@ from dataclasses import dataclass # библиотека для сереализ
 
 @dataclass # декоратор - это то что будет выполнено до исполнения(заранее)
 class Student:
+    """Класс Student представляет студента учебного заведения"""
     fio: str
     birthdate: str
     group: str
     gpa: float
 
     def __init__(self, fio, birthdate, group, gpa):
+        """Конструктор класса Student"""
         self.fio = fio
         self.birthdate = birthdate
         self.group = group
@@ -17,19 +19,20 @@ class Student:
         self.__post_init__()
 
     def __post_init__(self): #выполняется после вызова конструктора
+        """Метод, автоматически вызываемый после __init__.
+        Выполняет валидацию данных."""
         if self.gpa > 5 or self.gpa < 0:
-            raise ValueError("Неправильный gpa")
+            raise ValueError("GPA должен быть в диапазоне от 0 до 5")
         try:
-            self.birthdate = datetime.strptime(self.birthdate, "%Y/%m/%d") #%Y - год /%m - месяц /%d - дата
+            self.birthdate = datetime.strptime(self.birthdate, "%Y-%m-%d") #%Y - год /%m - месяц /%d - дата
             #strptime преобразование строки к объекту datetime
         except ValueError:
             raise ValueError("Неправильный формат даты рождения, ожидается:ГГГГ-ММ-ДД")
         
-        # if not (0 <= self.gpa <= 10):
-        #     raise ValueError("gpa must be between 0 and 10")
 
     def age(self) -> int:
-        b = self.birthdate
+        """Рассчитывает возраст студента в полных годах"""
+        b = self.birthdate ## birthdate теперь объект datetime после валидации
         today = date.today()
         if today.month > b.month:
             return today.year - b.year
@@ -40,6 +43,9 @@ class Student:
         return today.year - b.year - 1
 
     def to_dict(self) -> dict:
+        """ Сериализует объект Student в словарь
+        (Словарь с данными студента, готовый для сохранения в JSON)"""
+        
         return {
             "fio": self.fio,
             "birthdate": self.birthdate.strftime("%Y/%m/%d"),
@@ -49,6 +55,7 @@ class Student:
 
     @classmethod 
     def from_dict(cls, d: dict):
+        """Десериализует словарь в объект Student"""
         fio = d["fio"]
         birthdate = d["birthdate"]
         group = d["group"]
@@ -56,5 +63,6 @@ class Student:
         return cls(fio, birthdate, group, gpa)
 
     def __str__(self):
+        """ Возвращает читаемое строковое представление объекта"""
         return f"Student:{self.fio}, {self.age()} years old, group {self.group}, rating {self.gpa}"
     
