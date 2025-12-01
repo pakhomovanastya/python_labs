@@ -99,4 +99,3 @@ def test_csv_to_json_empty(tmp_path: Path):
     src.write_text("", encoding="utf-8")
     with pytest.raises(ValueError):
         csv_to_json(str(src), str(dst))
-

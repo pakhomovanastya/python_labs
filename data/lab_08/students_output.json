@@ -1,0 +1,20 @@
+[
+  {
+    "fio": "John Snow",
+    "birthdate": "2000/12/01",
+    "group": "SE-01",
+    "gpa": 4.3
+  },
+  {
+    "fio": "Michael Jordan",
+    "birthdate": "1975/11/11",
+    "group": "PP-01",
+    "gpa": 5.0
+  },
+  {
+    "fio": "John Smit",
+    "birthdate": "1992/02/14",
+    "group": "JJ-92",
+    "gpa": 3.1
+  }
+]
