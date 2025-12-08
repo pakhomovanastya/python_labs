@@ -53,15 +53,6 @@ class Group:
 
     def update(self, fio: str, **fields):
         '''обновить поля существующего студента'''
-        # students_to_update = self.find(fio) #студенты с такими ФИО которых мы будем фпдейтить (список студентов с текущеми данными)
-
-        # for student_dict in students_to_update:
-        #     for k, v in fields.items():
-        #         student_dict[k] = v #в списке словарей где значение заменяем на другое
-        
-
-        # for student_dict in students_to_update:
-        #     self.add(Student.from_dict(student_dict))
         rows = self._read_all()
         for r in rows:
             if r["fio"] == fio:
