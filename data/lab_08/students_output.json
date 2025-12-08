@@ -1,20 +1,20 @@
 [
   {
-    "fio": "John Snow",
-    "birthdate": "2000/12/01",
-    "group": "SE-01",
+    "fio": "Maria R",
+    "birthdate": "2004-03-07",
+    "group": "II-09",
+    "gpa": 4.8
+  },
+  {
+    "fio": "Bob S",
+    "birthdate": "2009-04-14",
+    "group": "SE-05",
+    "gpa": 3.2
+  },
+  {
+    "fio": "Carl M",
+    "birthdate": "2006-06-25",
+    "group": "G-11",
     "gpa": 4.3
-  },
-  {
-    "fio": "Michael Jordan",
-    "birthdate": "1975/11/11",
-    "group": "PP-01",
-    "gpa": 5.0
-  },
-  {
-    "fio": "John Smit",
-    "birthdate": "1992/02/14",
-    "group": "JJ-92",
-    "gpa": 3.1
   }
 ]
