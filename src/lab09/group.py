@@ -11,7 +11,7 @@ class Group:
             self.path.write_text("fio,birthdate,group,gpa\n", encoding="utf-8") 
 
     def _read_all(self): #список словарей
-        '''прочитать все строки из CSV'''
+        '''прочитает весь файл и возвращает список словарей'''
         rows = []
         with open(self.path, "r", encoding="utf-8") as fr:
             csv_reader = csv.DictReader(fr, fieldnames=['fio', 'birthdate', 'group', 'gpa'])
@@ -22,7 +22,7 @@ class Group:
         return rows
 
     def list(self):
-        '''вернуть всех студентов в виде списка Student'''
+        '''преобразует записи из файла в список объектов Student'''
         students = []
         for s_dict in self._read_all():
             students.append(Student(s_dict['fio'], s_dict['birthdate'],s_dict ['group'], float(s_dict['gpa'])))
