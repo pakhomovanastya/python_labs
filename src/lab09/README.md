@@ -220,6 +220,8 @@ if __name__ == '__main__':
 
 group.py
 ===
+<img width="1197" height="691" alt="group_01" src="https://github.com/user-attachments/assets/d933bf67-03c5-45ff-9360-b71451f85716" />
+<img width="1112" height="882" alt="group_02" src="https://github.com/user-attachments/assets/ef2de457-af0a-4d7f-b254-41e25bc5b8da" />
 
 main.py
 ===
@@ -227,19 +229,27 @@ main.py
 Добавление нового студента
 >g.add(Student("Прудников Иван", "2000-01-01", "БИВТ-25-25", 2.3))
 ===
+<img width="1481" height="622" alt="add" src="https://github.com/user-attachments/assets/e06d1be1-4048-4149-9442-7238df81213a" />
+
 
 Поиск студентов
 >print(g.find('ров'))  # Найдет всех с "ров" в имени
 ===
+<img width="1473" height="688" alt="find" src="https://github.com/user-attachments/assets/1ba993ac-c879-4bfc-a0f4-f81249ef2eab" />
+
 
 Получение списка всех студентов
 >all_students = g.list()
 ===
+<img width="1483" height="605" alt="list" src="https://github.com/user-attachments/assets/d9a67a9c-3c63-4f96-917b-330f9de08bd4" />
+
 
 Удаление студента
 >g.remove("Сидоров Андрей")
 ===
+<img width="1475" height="753" alt="remove" src="https://github.com/user-attachments/assets/46b461d2-4bb4-4e52-9868-9987a53f62da" />
 
 Обновление данных
 >g.update("Сидоров Андрей", group="БИВТ-21-3", gpa=4.6)
 ===
+<img width="1543" height="392" alt="update" src="https://github.com/user-attachments/assets/41980878-30ae-4a7e-b979-0b38b3d6bab9" />
