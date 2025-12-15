@@ -62,4 +62,3 @@ class Group:
             writer_csv = csv.DictWriter(fw, fieldnames=['fio', 'birthdate', 'group', 'gpa'])
             writer_csv.writeheader()
             writer_csv.writerows(rows)
-        
