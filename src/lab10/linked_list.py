@@ -65,12 +65,11 @@ class SinglyLinkedList:
             self._size -= 1
             return value
         
-        current = self.head
-        for _ in range(idx - 1):
+        current = self.head # Удаление из середины или конца
+        for _ in range(idx - 1): # Ищем узел перед удаляемым
             current = current.next
-        
-        value = current.next.value
-        current.next = current.next.next
+        value = current.next.value #Запоминаем значение удаляемого узла
+        current.next = current.next.next # Пропускаем удаляемый узел
         self._size -= 1
         return value
 
@@ -78,8 +77,9 @@ class SinglyLinkedList:
         """Возвращает итератор по значениям списка"""
         current = self.head
         while current is not None:
-            yield current.value
-            current = current.next
+            yield current.value # Возвращаем значение текущего узла
+                                # yield делает функцию генератором
+            current = current.next  # Переходим к следующему
 
     def __len__(self):
         """Возвращает количество элементов в списке"""
