@@ -233,9 +233,17 @@ def __iter__(self):
 # Это позволяет писать for value in my_list
 ```
 lab10/structures.py
+<img width="1242" height="851" alt="structures py" src="https://github.com/user-attachments/assets/48ec7fee-c7b5-4737-a16d-977c08d0476c" />
+<img width="1142" height="861" alt="structures py 2 часть" src="https://github.com/user-attachments/assets/8c9e671a-20cf-4341-a1a6-05f6c9ba48e7" />
 
 lab10/linked_list.py
+<img width="1255" height="1011" alt="linked_list py" src="https://github.com/user-attachments/assets/5fe7de3d-06c5-4ab2-ba59-0a7213bd308a" />
+<img width="1255" height="1011" alt="linked_list py" src="https://github.com/user-attachments/assets/0ebdaca7-150d-4096-afd5-13fa241993bf" />
+<img width="795" height="435" alt="linked_list py 3 часть" src="https://github.com/user-attachments/assets/22b5c8ff-31ff-4f74-9ee1-a6d5d493f016" />
 
 lab10/main.py
+<img width="1021" height="860" alt="main 1 часть" src="https://github.com/user-attachments/assets/82169df2-41c0-4abe-88bb-3e2d70e1d75e" />
+<img width="1077" height="475" alt="main 2 часть" src="https://github.com/user-attachments/assets/5e52b36f-108a-4b3c-afc0-a73b2239e38a" />
 
 вывод
+<img width="866" height="521" alt="вывод" src="https://github.com/user-attachments/assets/1137c960-8c86-48f5-90d5-5d1648e55258" />
